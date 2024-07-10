@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Test Page</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #2196F3;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #2196F3;
+        }
+        p {
+            color: #e0e0e0;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #757575;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            background-color: #2196F3;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button.unfollow {
+            background-color: #f44336;
+        }
+        .number-display {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .profile-container {
+            margin-bottom: 20px;
+        }
+        .profile-container h3 {
+            margin: 10px 0;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Not So Social Media</h1>
+    </header>
+    <main>
+        <h2>User Profiles</h2>
+        
+        <div class="profile-container">
+            <h3>Antwaun Dixon</h3>
+            <button class="button some-class" onclick="incrementNumber('antwaun')">Follow</button>
+            <button class="button some-class unfollow" onclick="decrementNumber('antwaun')">Unfollow</button>
+            <div class="number-display" id="antwaunDisplay">0</div>
+        </div>
+        
+        <div class="profile-container">
+            <h3>Milton Martinez</h3>
+            <button class="button some-class" onclick="incrementNumber('milton')">Follow</button>
+            <button class="button some-class unfollow" onclick="decrementNumber('milton')">Unfollow</button>
+            <div class="number-display" id="miltonDisplay">0</div>
+        </div>
+        
+        <div class="profile-container">
+            <h3>Sammy Baca</h3>
+            <button class="button some-class" onclick="incrementNumber('sammy')">Follow</button>
+            <button class="button some-class unfollow" onclick="decrementNumber('sammy')">Unfollow</button>
+            <div class="number-display" id="sammyDisplay">0</div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Invader Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const counts = {
+            antwaun: 0,
+            milton: 0,
+            sammy: 0
+        };
+
+        function incrementNumber(user) {
+            if (counts[user] < 1) {
+                counts[user] += 1;
+                document.getElementById(user + 'Display').innerText = counts[user];
+            }
+        }
+
+        function decrementNumber(user) {
+            if (counts[user] > 0) {
+                counts[user] -= 1;
+                document.getElementById(user + 'Display').innerText = counts[user];
+            }
+        }
+    </script>
+</body>
+</html>
