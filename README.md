@@ -23,5 +23,6 @@ The Walkthrough is available in the DEMO Directory
 
 Support My Work With A Cup Of Coffee
 
-https://cash.app/$Token00100100
+![CashTag$ copy](https://github.com/Invader00100100/Social-Media-Bot/assets/102438675/e107927f-ea6b-43f0-95dd-6bf4ccb86e62)
+
 
